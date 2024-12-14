@@ -1,0 +1,30 @@
+<div class="modal" *ngIf="note">
+    <div class="modal-content">
+      <h2>Edit Note</h2>
+      <form [formGroup]="noteForm" (ngSubmit)="onUpdate()">
+        <label for="text">Text</label>
+        <input id="text" formControlName="text" type="text">
+        
+        <label for="type">Type</label>
+        <select id="type" formControlName="type">
+          <option *ngFor="let type of noteTypes" [value]="type">{{type}}</option>
+        </select>
+        
+        <label for="reminder">Reminder</label>
+        <input id="reminder" formControlName="reminder" type="datetime-local">
+        
+        <label for="dueDate">Due Date</label>
+        <input id="dueDate" formControlName="dueDate" type="datetime-local">
+        
+        <label for="isComplete">Complete</label>
+        <input id="isComplete" formControlName="isComplete" type="checkbox">
+        
+        <label for="url">URL</label>
+        <input id="url" formControlName="url" type="text">
+        
+        <button type="submit">Update</button>
+        <button type="button" (click)="onCancel()">Cancel</button>
+      </form>
+    </div>
+  </div>
+  

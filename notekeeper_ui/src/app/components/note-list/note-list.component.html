@@ -1,4 +1,6 @@
-<div class="container mx-auto px-4">
+
+
+   <div class="container mx-auto px-4">
     <h2 class="text-2xl font-bold mb-4">Note List</h2>
     <div class="overflow-x-auto">
       <table class="min-w-full divide-y divide-gray-200">
@@ -37,4 +39,47 @@
       <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages" class="px-4 py-2 bg-gray-300 rounded-lg">Next</button>
     </div>
   </div>
+
+  <!-- <div class="container mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-4">Note List</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Text</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reminder</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Due Date</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Complete</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">URL</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr *ngFor="let note of paginatedNotes" [ngClass]="getNoteTypeClass(note.type)">
+            <td class="px-6 py-4 whitespace-nowrap">{{ note.text }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">{{ note.type }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">{{ note.reminder | date:'short' }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">{{ note.dueDate | date:'short' }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">{{ note.isComplete ? 'Yes' : 'No' }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <a [href]="note.url" class="text-blue-500 hover:underline" *ngIf="note.url">{{ note.url }}</a>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <button (click)="editNote(note)" class="text-white bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="flex justify-between items-center mt-4">
+      <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1" class="px-4 py-2 bg-gray-300 rounded-lg">Previous</button>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages" class="px-4 py-2 bg-gray-300 rounded-lg">Next</button>
+    </div>
+  </div>
+  
+  <app-note-modal *ngIf="selectedNote" [note]="selectedNote" (update)="onNoteUpdate($event)"></app-note-modal> -->
+  
   

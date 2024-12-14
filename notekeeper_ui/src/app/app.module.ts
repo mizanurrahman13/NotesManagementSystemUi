@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastComponent } from './components/toast/toast.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { NoteModalComponent } from './components/note-modal/note-modal.component';
 
 const routes: Routes = [
   { path: 'signup', component: SignUpComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
     SignUpComponent,
     SigninComponent,
     CreateNoteComponent,
-    NoteListComponent,    
+    NoteListComponent,
+        
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     ToastComponent,
+    NoteModalComponent,
     CommonModule,
     RouterModule.forRoot(routes) // Add RouterModule to imports
   ],

@@ -1,6 +1,6 @@
 
 
-   <div class="container mx-auto px-4">
+   <!-- <div class="container mx-auto px-4">
     <h2 class="text-2xl font-bold mb-4">Note List</h2>
     <div class="overflow-x-auto">
       <table class="min-w-full divide-y divide-gray-200">
@@ -38,9 +38,9 @@
       <span>Page {{ currentPage }} of {{ totalPages }}</span>
       <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages" class="px-4 py-2 bg-gray-300 rounded-lg">Next</button>
     </div>
-  </div>
+  </div> -->
 
-  <!-- <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4">
     <h2 class="text-2xl font-bold mb-4">Note List</h2>
     <div class="overflow-x-auto">
       <table class="min-w-full divide-y divide-gray-200">
@@ -80,6 +80,6 @@
     </div>
   </div>
   
-  <app-note-modal *ngIf="selectedNote" [note]="selectedNote" (update)="onNoteUpdate($event)"></app-note-modal> -->
+  <app-note-modal *ngIf="selectedNote" [note]="selectedNote" (update)="onNoteUpdate($event)"></app-note-modal>
   
   
